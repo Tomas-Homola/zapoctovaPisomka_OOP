@@ -58,7 +58,7 @@ a metódy:
 
 class Employee
 {
-private:
+private: // asi mozno protected
 	string priezvisko;
 	Date nastup;
 	double vyplata;
@@ -123,10 +123,10 @@ void Manager::printInfo()
 }
 
 
-void changeNumberOfEmps(Manager& m, int newNumberOfEmps)
+void changeNumberOfEmps(Manager* m, int newNumberOfEmps)
 {
 	//2. zavolajte funkciu ktorá zmení hodnotu počtu zamestnacov v tíme pre objekt m
-	m.setEmployees(newNumberOfEmps);
+	m->setEmployees(newNumberOfEmps);
 }
 
 int main()
@@ -182,7 +182,7 @@ int main()
 
 	//8. upravte funkciu changeNumberOfEmps aby nepracovala s kópiou posledného objektu v poli managers, 
 	//ale aby priamo pristupovala k objektu
-	changeNumberOfEmps(managers[n - 1], 12);
+	changeNumberOfEmps(&managers[n - 1], 12);
 
 	for (int i = 0; i < n; i++)
 	{
