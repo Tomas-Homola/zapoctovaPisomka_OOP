@@ -119,7 +119,7 @@ public:
 
 void Manager::printInfo()
 {
-	cout << "Priezvisko: " << getPriezvisko() << ", nastupil: " << getNastup().toString() << ", ma vyplatu: " << getVyplata() << ", pocet zamestnancov: " << getEmployees() << endl;
+	cout << "Priezvisko: " << getPriezvisko() << ", nastupil: " << getNastup().toString() << ", ma vyplatu: " << getVyplata() << " EUR, pocet zamestnancov: " << getEmployees() << endl;
 }
 
 
